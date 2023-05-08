@@ -5,14 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
-  <body>
     <script>
       //[#prompt]
-      //   var x, y;
-      //   x = prompt("x값을 입력하세요", 0);
-      //   y = prompt("y값을 입력하세요", 0);
-      //   alert(x + y);  //JS에서 형태가 어떻든 모든것은 문자열로 받아온다.
+      var x, y;
+      x = prompt("x값을 입력하세요", 0);
+      y = prompt("y값을 입력하세요", 0);
+      alert(x + y); //JS에서 형태가 어떻든 모든것은 문자열로 받아온다.
 
       var x = prompt("x : ");
       var y = prompt("y : ");
@@ -22,12 +20,26 @@
 
       console.log(x + y);
     </script>
-
     <script>
       //[#confirm] : Yes or No (true/false)
       var answer;
       answer = confirm("정말로 삭제하시겠습니까?");
       if (answer) alret("삭제되었습니다.");
     </script>
+  </head>
+  <body>
+    <!-- [#event(input)] -->
+    <input
+      type="button"
+      value="click"
+      onclick="var x = prompt('x: ');
+    var y = prompt('y : ');
+    
+    x =parseInt(x);
+    y = parseInt(y);
+    
+    alert(x+y)"
+    />
+    <div onclick="alert('클릭했구나 땡큐~');">여기 한 번 클릭해봐</div>
   </body>
 </html>
