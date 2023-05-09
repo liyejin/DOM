@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script>
+    <!-- <script>
       //[#prompt]
       var x, y;
       x = prompt("x값을 입력하세요", 0);
@@ -19,27 +19,36 @@
       y = parseInt(y);
 
       console.log(x + y);
-    </script>
+    </script> -->
     <script>
-      //[#confirm] : Yes or No (true/false)
-      var answer;
-      answer = confirm("정말로 삭제하시겠습니까?");
-      if (answer) alret("삭제되었습니다.");
+      // //[#confirm] : Yes or No (true/false)
+      // var answer;
+      // answer = confirm("정말로 삭제하시겠습니까?");
+      // if (answer) alret("삭제되었습니다.");
+    </script>
+
+    <script>
+      //[#page load event]
+      function printResult() {
+        var x = prompt("x의 값을 입력하세요", 0);
+        var y = prompt("y의 값을 입력하세요", 0);
+        alert(x + y);
+
+        x = parseInt(x);
+        y = parseInt(y);
+
+        console.log(x + y);
+
+        btnPrint.value = x + y;
+      }
+      window.onload = function () {
+        btnPrint.onclick = printResult;
+      };
     </script>
   </head>
   <body>
     <!-- [#event(input)] -->
-    <input
-      type="button"
-      value="click"
-      onclick="var x = prompt('x: ');
-    var y = prompt('y : ');
-    
-    x =parseInt(x);
-    y = parseInt(y);
-    
-    alert(x+y)"
-    />
+    <input type="button" value="출력" id="btnPrint" />
     <div onclick="alert('클릭했구나 땡큐~');">여기 한 번 클릭해봐</div>
   </body>
 </html>
