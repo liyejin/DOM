@@ -8,6 +8,11 @@ function printResult() {
 
   console.log(x + y);
 }
-window.onload = function () {
+
+window.addEventListener("load", function () {
   btnPrint.onclick = printResult;
-};
+});
+
+// window.onload = function () {
+//   btnPrint.onclick = printResult;
+// };
