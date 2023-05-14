@@ -2,14 +2,11 @@
 window.addEventListener("load", function () {
   var section = document.querySelector("#s3");
   var txtInput = section.querySelector("input[type=text]");
-
-  var btnInputs = section.querySelectorAll(".num");
-  var buttonClickHandler = function (e) {
+  var box = section.querySelector("div");
+  box.onclick = function (e) {
+    if (e.target.nodeName != "INPUT") return;
     txtInput.value += e.target.value;
   };
-
-  for (var i = 0; i < btnInputs.length; i++)
-    btnInputs[i].onclick = buttonClickHandler;
 });
 
 //<h1>2. DOM 속성 다루기 : 계산기</h1>------------------------------------------
