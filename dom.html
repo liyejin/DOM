@@ -5,25 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="dom.js"></script>
+    <link rel="stylesheet" href="dom.css" />
     <title>Document</title>
   </head>
   <body>
     <section id="s3">
       <h1>3. 이벤트 객체 : 개선된 계산기</h1>
-      <div>
+      <form action="">
+      <div class="box">
+        <input type="button" value="%" />
+        <input type="button" value="CE" />
+        <input type="button" value="C" />
+        <input type="button" value="/" />
+
+        <input type="submit" value="6" />
+        <input type="button" value="7" />
+        <input type="button" value="8" />
+        <input type="button" value="9" />
+
         <input class="result" type="text" value="0" dir="rt1" />
         <input class="num" type="button" value="1" />
         <input class="num" type="button" value="2" />
         <input class="num" type="button" value="3" />
         <input class="num" type="button" value="4" />
         <input class="num" type="button" value="5" />
-        <input type="button" value="6" />
-        <input type="button" value="7" />
-        <input type="button" value="8" />
+
         <input type="button" value="+" />
         <input type="button" value="-" />
         <input type="button" value="x" />
-        <input type="button" value="/" />
         <input type="button" value="=" />
 
         <!-- <span>계산결과 : <span>0</span></span> -->
@@ -38,6 +47,7 @@
         <input class="button" type="button" value="덧셈" />
         <span>계산결과 : <span>0</span></span>
       </div>
+      </form>
     </section>
 
     <hr />

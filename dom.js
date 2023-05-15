@@ -4,6 +4,7 @@ window.addEventListener("load", function () {
   var txtInput = section.querySelector("input[type=text]");
   var box = section.querySelector("div");
   box.onclick = function (e) {
+    e.preventDefault();
     if (e.target.nodeName != "INPUT") return;
     txtInput.value += e.target.value;
   };
