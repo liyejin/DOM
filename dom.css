@@ -44,18 +44,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* effect */
+  transition: left 1s, width 1s, height 1s, background-color 1s;
 }
 
-#s5 .box li:nth-child(1) {
+#s5 .box li.card-1th {
   left: 0px;
+  width: 100px;
+  height: 150px;
+  background-color: #00000077;
+  z-index: 1;
 }
 
-#s5 .box li:nth-child(2) {
-  left: calc(50% - 50px);
+#s5 .box li.card-2th {
+  left: calc(50% - 60px);
+  width: 120px;
+  height: 180px;
+  background-color: red;
+  z-index: 2;
 }
 
-#s5 .box li:nth-child(3) {
+#s5 .box li.card-3th {
   left: calc(100% - 100px);
+  width: 100px;
+  height: 150px;
+  background-color: #00000077;
+  z-index: 0;
 }
 
 #s5 .btn-list {

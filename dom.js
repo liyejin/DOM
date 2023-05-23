@@ -1,3 +1,54 @@
+//5.
+window.addEventListener("load", function () {
+  var section = document.querySelector("#s5");
+  var btnPrev = section.querySelector(".btn-prev");
+  var btnNext = section.querySelector(".btn-next");
+  var lis = section.querySelectorAll("li");
+  var offIndex = 0;
+
+  btnNext.onclick = function (e) {
+    e.preventDefault();
+
+    offIndex++;
+
+    var size = lis.length;
+    lis[(0 + offIndex) % size].className = "card-1th";
+
+    lis[(1 + offIndex) % size].className = "card-2th";
+
+    lis[(2 + offIndex) % size].className = "card-3th";
+
+    //   lis[0 + offIndex].style.left = "0px";
+
+    //   lis[1 + offIndex].style.left = "calc(50% - 60px)";
+    //   lis[1 + offIndex].style.width = "120px";
+    //   lis[1 + offIndex].style.height = "180px";
+
+    //   lis[2 + offIndex].style.left = "calc(100% - 100px)";
+  };
+
+  btnPrev.onclick = function (e) {
+    e.preventDefault();
+
+    offIndex++;
+
+    var size = lis.length;
+    lis[(0 + offIndex) % size].className = "card-1th";
+
+    lis[(1 + offIndex) % size].className = "card-2th";
+
+    lis[(2 + offIndex) % size].className = "card-3th";
+
+    //   lis[0 + offIndex].style.left = "0px";
+
+    //   lis[1 + offIndex].style.left = "calc(50% - 60px)";
+    //   lis[1 + offIndex].style.width = "120px";
+    //   lis[1 + offIndex].style.height = "180px";
+
+    //   lis[2 + offIndex].style.left = "calc(100% - 100px)";
+  };
+});
+
 //4. 스타일 다루기 : 값 입력과 동적으로 박스 스타일 변경------------------------------------------
 window.addEventListener("load", function () {
   var section = document.querySelector("#s4");
