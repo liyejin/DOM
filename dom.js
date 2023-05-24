@@ -1,4 +1,23 @@
-//5.
+//6. 스타일 다루기(class list) : 아코디언
+window.addEventListener("load", function () {
+  var section = document.querySelector("#s6");
+  var box = section.querySelector(".box");
+
+  box.onclick = function (e) {
+    var isHeaderOnclick =
+      e.target.nodeName == "H2" ||
+      e.target.classList.contains("accodion-header");
+
+    if (!isHeaderOnclick) return;
+
+    console.log("test");
+
+    // if (e.target.nodeName != "H2") return;
+    // if (e.target.className != "H2") return;
+  };
+});
+
+//5. 스타일 다루기(class name) : 아이템 이동
 window.addEventListener("load", function () {
   var section = document.querySelector("#s5");
   var btnPrev = section.querySelector(".btn-prev");
