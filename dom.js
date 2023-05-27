@@ -1,19 +1,47 @@
+//7. 스타일 다루기(CoputedStyle/...) : 선택된 아이템을 이동하기
+window.addEventListener("load", function () {
+  var section = document.querySelector("#s7");
+  var box = section.querySelector(".box");
+
+  var selectedItem = section.querySelector(".selected");
+
+  box.onclick = function (e) {
+    //클릭했는데 클래스 리스트에 없다면 return => 그냥 아무일 없는 거?
+    var validItem =
+      e.target.classList.contains("src-item") ||
+      e.target.classList.contains("dst-item");
+
+    if (!validItem) return;
+
+    if (selectedItem != null) {
+      selectedItem.classList.toggle("selected");
+      e.target.classList.toggle("selected");
+      selectedItem = e.target;
+    } else if (e.target.classList.contains("dst-item")) {
+      console.log("test");
+    }
+  };
+});
+
 //6. 스타일 다루기(class list) : 아코디언
+
 window.addEventListener("load", function () {
   var section = document.querySelector("#s6");
   var box = section.querySelector(".box");
+  var current = section.querySelector(".active");
 
   box.onclick = function (e) {
     var isHeaderOnclick =
       e.target.nodeName == "H2" ||
-      e.target.classList.contains("accodion-header");
+      e.target.classList.contains("accordion-header");
 
     if (!isHeaderOnclick) return;
 
-    console.log("test");
+    if (current != null) current.classList.remove("active");
 
-    // if (e.target.nodeName != "H2") return;
-    // if (e.target.className != "H2") return;
+    e.target.classList.add("active");
+    current = e.target;
+    console.log("text");
   };
 });
 

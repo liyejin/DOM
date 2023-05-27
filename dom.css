@@ -1,5 +1,55 @@
+/* 7. 스타일 다루기(CoputedStyle/...) : 선택된 아이템을 이동하기 */
+#s7 .box {
+  background-color: gray;
+  height: 400px;
+
+  display: flex;
+  position: relative;
+}
+
+#s7 .src-item-list {
+  width: 300px;
+}
+
+#s7 .item {
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+#s7 .src-item:hover {
+  background-color: red;
+}
+
+#s7 .src-item:nth-child(1) {
+  top: 0px;
+}
+#s7 .src-item:nth-child(2) {
+  top: 150px;
+}
+#s7 .src-item:nth-child(3) {
+  top: 300px;
+}
+
+#s7 .dst-item:hover {
+  cursor: pointer;
+  border: 2px dashed red;
+}
+
 /* 6. 스타일 다루기(class list) : 아코디언 */
-.accordion-box {
+
+#s6 > .box {
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -28,6 +78,11 @@
 
   /* effect */
   transition: background-color 1s;
+}
+
+#s6 > .box > h2.active,
+.accordion-header.active + .accordion-content {
+  flex-grow: 1;
 }
 
 #s6 > .box > div,
